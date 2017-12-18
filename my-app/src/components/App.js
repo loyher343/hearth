@@ -45,7 +45,7 @@ class App extends Component {
       <div className="App">
        <p>hearth</p>
        <div>
-       { this.state.cardbackList.map((x,i) => this.renderCardbacks(x,i)) }
+
        </div>
 
       </div>
