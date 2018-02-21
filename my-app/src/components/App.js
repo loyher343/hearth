@@ -18,36 +18,16 @@ class App extends Component {
     }
   }
 
-  componentWillMount(){
-    
-    axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cardbacks?'+config.key).then(res => {
-      //console.log(res.data)
-      this.setState({cardbackList: res.data})
-      //console.log(this.state)
-    })
-    axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/info'+config.key).then(res => {
-      console.log(res)
-    })
-    
-  }
-
-  renderCardbacks(item, index) {
-    //console.log(item, index)
-    return(
-      <div key="index">
-
-      </div>
-    )
-  }
+  
 
   render() {
     return (
       <div className="App">
-       <p>hearth</p>
-       <div>
-
-       </div>
-
+        <div>
+          <p>hearth nav</p>
+          
+        </div>
+        {router}
       </div>
     );
   }
