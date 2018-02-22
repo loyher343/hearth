@@ -7,18 +7,43 @@ class Cards extends Component{
         super(props);
 
         this.state={
+            value: '',
+            card: {}
+        };
 
-        }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSumbit = this.handleSumbit.bind(this);
     }
 
-    componentWillMount(){
+    handleChange(event) {
+        this.setState({value: event.target.value});
+        console.log(this.state)
+    }
 
+    handleSumbit(event){
+        console.log('Joast')
+       
+       axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/' + this.state.value+ "?" + config.key).then(res=>{
+            console.log(res.data)
+            this.setState({card:res.data})
+        })
+ 
+        console.log(this.state)
+        
+        console.log("yo")
     }
 
     render(){
         return(
             <div>
-                </div>
+                <form onSubmit={this.handleSumbit}>
+                <label>
+                <input type="text" placeholder="Card Name" value={this.state.value} onChange={this.handleChange}  /> <br />
+                </label>
+                <input type="submit" value="Submit" />
+                </form>
+            </div>
         )
     }
 }
+export default Cards;

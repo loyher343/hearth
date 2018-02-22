@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import '../App.css';
 import router from '../router.js';
 //import {withRouter} from 'react-router-dom'
-import axios from 'axios';
-import  config  from '../config.js'
+//import axios from 'axios';
+//import  config  from '../config.js'
 
 
 
