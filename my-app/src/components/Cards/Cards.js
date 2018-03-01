@@ -17,23 +17,18 @@ class Cards extends Component{
 
     handleChange(event) {
         this.setState({value: event.target.value});
-        console.log(this.state)
+        //console.log(this.state)
     }
 
     handleSumbit(event){
-        console.log('Joast',this.state.value)
+        //console.log('Joast',this.state.value)
         event.preventDefault();
-// axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cardbacks?'+config.key).then(res => {
-//           console.log(res.data)
-//           this.setState({cardbackList: res.data})
-//           console.log(this.state)
-//         })
 
-        //axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/Deathwing?mashape-key=yXPCCXWwlYmshY8PzPP8zFklfw5kp1lqWB9jsnB77ezPdfpGRh').then(res=>{
+
         axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/' + this.state.value+ "?" + config.key).then(res=>{
-            console.log(res.data)
+           // console.log(res.data)
             this.setState({card:res.data})
-            console.log(this.state)
+           // console.log(this.state)
         })
  
         

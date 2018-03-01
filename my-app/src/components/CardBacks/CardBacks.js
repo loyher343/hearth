@@ -57,4 +57,4 @@ class CardBacks extends Component{
     //     </div>
     // )
 }
-export default CardBacks
+export default CardBacks;
