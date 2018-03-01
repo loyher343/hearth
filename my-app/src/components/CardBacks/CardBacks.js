@@ -46,7 +46,7 @@ class CardBacks extends Component{
             <div>
                 <h1>Cardbacks</h1>
                 <div>
-                    { this.state.cardbackList.map((x,i) => this.renderCardbacks(x,i)) }
+                  { this.state.cardbackList.map((x,i) => this.renderCardbacks(x,i)) }
                 </div>
             </div>
         )

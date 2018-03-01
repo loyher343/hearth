@@ -8,7 +8,7 @@ class Cards extends Component{
 
         this.state={
             value: '',
-            card: {}
+            card: []
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -40,15 +40,33 @@ class Cards extends Component{
         console.log("yo")
     }
 
+    renderCard(item, index){
+        console.log(item,index)
+        return(
+            <div key={index}>
+            <h3>{ item.name }</h3>
+            <div>
+                <img src={ item.img } />
+            </div>
+            <p>{item.description}</p>
+            <p>{item.howToGet}</p>
+            <p>{item.source}</p>
+            </div>
+        )
+    }
+
     render(){
         return(
             <div>
                 <form onSubmit={this.handleSumbit}>
-                <label>
-                <input type="text" placeholder="Card Name" value={this.state.value} onChange={this.handleChange}  /> <br />
-                </label>
-                <input type="submit" value="Submit" />
+                    <label>
+                        <input type="text" placeholder="Card Name" value={this.state.value} onChange={this.handleChange}  /> <br />
+                    </label>
+                    <input type="submit" value="Submit" />
                 </form>
+                <div>
+                    { this.state.card.map((x,i) => this.renderCard(x,i)) }
+                </div>
             </div>
         )
     }
