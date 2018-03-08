@@ -35,26 +35,30 @@ class CardSets extends Component{
     }
 
     handleChange(event){
+        console.log(event.target.value)
         event.preventDefault();
         //this.setState({value: event.target.value});
-        axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/set/'+ event.target.value+"?"+ config.key)
+        //axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/Classic?mashape-key=yXPCCXWwlYmshY8PzPP8zFklfw5kp1lqWB9jsnB77ezPdfpGRh'
+        axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/'+ event.target.value+"?"+ config.key)
         .then(res => {
             console.log(res.data)
-        })
+        }).catch(function(error) {
+            console.log(error);
+        });
     }
 
-    componentWillMount(){
-        axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/set/'+this.state.set+"?"+ config.key)
-        .then(res => {
-            console.log(res.data)
-        })
-    }
+    // componentWillMount(){
+    //     axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/set/'+this.state.set+"?"+ config.key)
+    //     .then(res => {
+    //         console.log(res.data)
+    //     })
+    // }
 
     render(){
         return(
             <div>
                 <div>
-                    <button value="Kobolds & Catacombs" onClick={this.handleChange} >Kobolds & Catacombs</button>
+                    <button value="Classic" onClick={this.handleChange} >Classic</button>
                 </div>
                 {console.log(this.state)}
             </div>
