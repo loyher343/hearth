@@ -59,6 +59,11 @@ class CardSets extends Component{
             <div>
                 <div>
                     <button value="Classic" onClick={this.handleChange} >Classic</button>
+                    <button value="Hall of Fame" onClick={this.handleChange} >Hall of Fame</button>
+                    <button value="Naxxramas" onClick={this.handleChange} >Naxxramas</button>
+                    <button value="Goblins vs Gnomes" onClick={this.handleChange} >Goblins vs Gnomes</button>
+                    <button value="Blackrock Mountain" onClick={this.handleChange} >Blackrock Mountain</button>
+                    <button value="The Grand Tournament" onClick={this.handleChange} >The Grand Tournament</button>
                 </div>
                 {console.log(this.state)}
             </div>
