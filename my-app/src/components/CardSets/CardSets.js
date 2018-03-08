@@ -42,17 +42,27 @@ class CardSets extends Component{
         axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/'+ event.target.value+"?"+ config.key)
         .then(res => {
             console.log(res.data)
+            this.setState({set:res.data})
         }).catch(function(error) {
             console.log(error);
         });
+        console.log(this.state)
     }
 
-    // componentWillMount(){
-    //     axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/set/'+this.state.set+"?"+ config.key)
-    //     .then(res => {
-    //         console.log(res.data)
-    //     })
-    // }
+   renderSets(item, index){
+       
+       return(
+           <div key={index}>
+           <h3>{item.name}</h3>
+            <div>
+            <img src={item.img} />
+            </div>
+            <p>{item.description}</p>
+            <p>{item.howToGet}</p>
+            <p>{item.source}</p>
+           </div>
+       )
+   }
 
     render(){
         return(
@@ -66,6 +76,9 @@ class CardSets extends Component{
                     <button value="The Grand Tournament" onClick={this.handleChange} >The Grand Tournament</button>
                 </div>
                 {console.log(this.state)}
+                <div>
+                    {this.state.set.map((x,i) =>  this.renderSets(x,i)) }
+                </div>
             </div>
         )
     }
