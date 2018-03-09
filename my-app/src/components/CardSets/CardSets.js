@@ -15,18 +15,24 @@ class CardSets extends Component{
     }
 
     handleChange(event){
-        console.log(event.target.value)
+        let cards=[];
+        //console.log(event.target.value)
         event.preventDefault();
         //this.setState({value: event.target.value});
         //axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/Classic?mashape-key=yXPCCXWwlYmshY8PzPP8zFklfw5kp1lqWB9jsnB77ezPdfpGRh'
         axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/'+ event.target.value+"?"+ config.key)
         .then(res => {
-            console.log(res.data)
-            this.setState({set:res.data})
+            //console.log(res.data)
+            res.data.map((x,i) => {
+                //console.log(x.cost)
+               x.cost||x.cost===0? cards.push(x): null
+            })
+            this.setState({set:cards})
         }).catch(function(error) {
             console.log(error);
         });
-        console.log(this.state)
+        //console.log(cards)
+        //console.log(this.state)
     }
 
    renderSets(item, index){
