@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import config from  '../../config.js';
 
@@ -53,6 +54,7 @@ class Cards extends Component{
     render(){
         return(
             <div>
+            <Link to="/">Home</Link>
                 <form onSubmit={this.handleSumbit}>
                     <label>
                         <input type="text" placeholder="Card Name" value={this.state.value} onChange={this.handleChange}  /> <br />

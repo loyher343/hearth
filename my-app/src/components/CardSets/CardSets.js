@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import  config  from '../../config.js';
 
@@ -53,6 +54,7 @@ class CardSets extends Component{
     render(){
         return(
             <div>
+            <Link to="/">Home</Link>
                 <div>
                     <button value="Classic" onClick={this.handleChange} >Classic</button>
                     <button value="Hall of Fame" onClick={this.handleChange} >Hall of Fame</button>
