@@ -8,27 +8,7 @@ class CardSets extends Component{
 
         this.state={   
             set: [] 
-        // set:    [ "Basic",
-        //         "Classic",
-        //         "Promo",
-        //         "Hall of Fame",
-        //         "Naxxramas",
-        //         "Goblins vs Gnomes",
-        //         "Blackrock Mountain",
-        //         "The Grand Tournament",
-        //         "The League of Explorers",
-        //         "Whispers of the Old Gods",
-        //         "One Night in Karazhan",
-        //         "Mean Streets of Gadgetzan",
-        //         "Journey to Un'Goro",
-        //         "Knights of the Frozen Throne",
-        //         "Kobolds & Catacombs",
-        //         "Tavern Brawl",
-        //         "Hero Skins",
-        //         "Missions",
-        //         "Credits",
-        //         "System",
-        //         "Debug" ]
+        
 
         }
         this.handleChange = this.handleChange.bind(this);
@@ -74,6 +54,13 @@ class CardSets extends Component{
                     <button value="Goblins vs Gnomes" onClick={this.handleChange} >Goblins vs Gnomes</button>
                     <button value="Blackrock Mountain" onClick={this.handleChange} >Blackrock Mountain</button>
                     <button value="The Grand Tournament" onClick={this.handleChange} >The Grand Tournament</button>
+                    <button value="The League of Explorers" onClick={this.handleChange} >The League of Explorers</button>
+                    <button value="Whispers of the Old Gods" onClick={this.handleChange} >Whispers of the Old Gods</button>
+                    <button value="One Night in Karazhan" onClick={this.handleChange} >One Night in Karazhan</button>
+                    <button value="Mean Streets of Gadgetzan" onClick={this.handleChange} >Mean Streets of Gadgetzan</button>
+                    <button value="Journey to Un'Goro" onClick={this.handleChange} >Journey to Un'Goro</button>
+                    <button value="Knights of the Frozen Throne" onClick={this.handleChange} >Knights of the Frozen Throne</button>
+                    <button value="Kobolds & Catacombs" onClick={this.handleChange} >Kobolds & Catacombs</button>
                 </div>
                 {console.log(this.state)}
                 <div>
@@ -82,5 +69,25 @@ class CardSets extends Component{
             </div>
         )
     }
-}
+}// set:    [ "Basic",
+        //         "Classic",
+        //         "Promo",
+        //         "Hall of Fame",
+        //         "Naxxramas",
+        //         "Goblins vs Gnomes",
+        //         "Blackrock Mountain",
+        //         "The Grand Tournament",
+        //         "The League of Explorers",
+        //         "Whispers of the Old Gods",
+        //         "One Night in Karazhan",
+        //         "Mean Streets of Gadgetzan",
+        //         "Journey to Un'Goro",
+        //         "Knights of the Frozen Throne",
+        //         "Kobolds & Catacombs",
+        //         "Tavern Brawl",
+        //         "Hero Skins",
+        //         "Missions",
+        //         "Credits",
+        //         "System",
+        //         "Debug" ]
 export default CardSets;
