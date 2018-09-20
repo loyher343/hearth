@@ -13,7 +13,7 @@ class Cards extends Component{
         };
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleSumbit = this.handleSumbit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
@@ -21,7 +21,7 @@ class Cards extends Component{
         //console.log(this.state)
     }
 
-    handleSumbit(event){
+    handleSubmit(event){
         //console.log('Joast',this.state.value)
         event.preventDefault();
 
@@ -54,8 +54,8 @@ class Cards extends Component{
     render(){
         return(
             <div>
-            <Link to="/">Home</Link>
-                <form onSubmit={this.handleSumbit}>
+                <Link to="/">Home</Link>
+                <form onSubmit={this.handleSubmit}>
                     <label>
                         <input type="text" placeholder="Card Name" value={this.state.value} onChange={this.handleChange}  /> <br />
                     </label>
