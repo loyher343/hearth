@@ -10,6 +10,7 @@ export default function home(){
         <Link to="/CardSets">CardSets</Link>
         <Link to="/CardBacks">CardBacks</Link>
         <Link to="/Cards">CardSearch</Link>
+        <Link to="/GameTest">GameTest</Link>
         <p>JOAST</p>
         </div>
     )

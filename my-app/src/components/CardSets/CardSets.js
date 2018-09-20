@@ -69,6 +69,7 @@ class CardSets extends Component{
                     <button value="Journey to Un'Goro" onClick={this.handleChange} >Journey to Un'Goro</button>
                     <button value="Knights of the Frozen Throne" onClick={this.handleChange} >Knights of the Frozen Throne</button>
                     <button value="Kobolds & Catacombs" onClick={this.handleChange} >Kobolds & Catacombs</button>
+                    <button value="The Witchwood" onClick={this.handleChang} >The Witchwood </button>
                 </div>
                 {console.log(this.state)}
                 <div>

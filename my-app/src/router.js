@@ -3,7 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import home from './components/home/home';
 import CardBack from './components/CardBacks/CardBacks';
 import Cards from './components/Cards/Cards';
-import CardSets from './components/CardSets/CardSets'
+import CardSets from './components/CardSets/CardSets';
+import GameTest from './components/GameT/GameTest';
 
 
 export default (
@@ -12,5 +13,6 @@ export default (
      <Route path='/CardBacks' component={CardBack}/>
      <Route path='/Cards' component={Cards}/>
      <Route path='/CardSets' component={CardSets}/>
+     <Route path='/GameTest' component={GameTest}/>
     </Switch>
 )
