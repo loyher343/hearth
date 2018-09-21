@@ -1,0 +1,13 @@
+.cardContainer {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardBox {
+    height: 500px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import config from '../../config.js';
+import './GameTest.css'
 
 class GameTest extends Component{ 
 
@@ -17,6 +18,13 @@ class GameTest extends Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillMount(){
+        axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/' +'tinyfin' + "?" + config.key).then(res=>{
+            // console.log(res.data)
+             this.setState({card:res.data})
+            // console.log(this.state)
+         })
+    }
     handleChange(event) {
         this.setState({value: event.target.value});
         //console.log(this.state)
@@ -32,7 +40,7 @@ class GameTest extends Component{
             this.setState({card:res.data})
            // console.log(this.state)
         })
- 
+       
         
         console.log("yo")
     }
@@ -40,14 +48,13 @@ class GameTest extends Component{
     renderCard(item, index){
         console.log(item,index)
         return(
-            <div key={index}>
-            <h3>{ item.name }</h3>
-            <div>
+            <div className="cardContainer" key={index}>
+            {/* <h3>{ item.name }</h3> */}
+            <div className="cardBox">
                 <img src={ item.img } />
             </div>
             <p>{item.description}</p>
-            <p>{item.howToGet}</p>
-            <p>{item.source}</p>
+           
             </div>
         )
     }
