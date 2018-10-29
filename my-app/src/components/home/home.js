@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-
-//import axios from 'axios';
-
 export default function home(){
     return(
         <div>
@@ -14,5 +11,4 @@ export default function home(){
         <p>JOAST</p>
         </div>
     )
-    //dfas
 }
