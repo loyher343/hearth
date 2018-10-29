@@ -9,9 +9,8 @@ class CardSets extends Component{
 
         this.state={   
             set: [] 
-        
-
         }
+        
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -28,7 +27,7 @@ class CardSets extends Component{
                 //console.log(x.cost)
                x.cost||x.cost===0? cards.push(x): null
             })
-            this.setState({set:cards})
+            this.setState({ set:cards })
         }).catch(function(error) {
             console.log(error);
         });
@@ -78,25 +77,5 @@ class CardSets extends Component{
             </div>
         )
     }
-}// set:    [ "Basic",
-        //         "Classic",
-        //         "Promo",
-        //         "Hall of Fame",
-        //         "Naxxramas",
-        //         "Goblins vs Gnomes",
-        //         "Blackrock Mountain",
-        //         "The Grand Tournament",
-        //         "The League of Explorers",
-        //         "Whispers of the Old Gods",
-        //         "One Night in Karazhan",
-        //         "Mean Streets of Gadgetzan",
-        //         "Journey to Un'Goro",
-        //         "Knights of the Frozen Throne",
-        //         "Kobolds & Catacombs",
-        //         "Tavern Brawl",
-        //         "Hero Skins",
-        //         "Missions",
-        //         "Credits",
-        //         "System",
-        //         "Debug" ]
+}
 export default CardSets;
