@@ -25,6 +25,7 @@ class GameTest extends Component{
             // console.log(this.state)
          })
     }
+    
     handleChange(event) {
         this.setState({value: event.target.value});
         //console.log(this.state)
@@ -33,14 +34,11 @@ class GameTest extends Component{
     handleSubmit(event){
         //console.log('Joast',this.state.value)
         event.preventDefault();
-
-
         axios.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/' + this.state.value+ "?" + config.key).then(res=>{
            // console.log(res.data)
             this.setState({card:res.data})
            // console.log(this.state)
         })
-       
         
         console.log("yo")
     }
@@ -58,10 +56,6 @@ class GameTest extends Component{
             </div>
         )
     }
-
-
-
-
     
     render(){
         
